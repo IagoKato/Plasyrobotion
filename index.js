@@ -5,7 +5,7 @@ const app = express()
 const port = 3001
 
 app.get('/run', async (req, res) => {
-    res.send(await scraper(req.query.keyword))
+    res.send(await scraper(req.query.keyword,req.query.page))
 })
 
 app.listen(port, () => {
